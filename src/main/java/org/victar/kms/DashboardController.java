@@ -17,8 +17,8 @@ import org.victar.kms.dal.*;
 @Controller
 public class DashboardController {
 	
-	@Autowired
-	KeyRepository keyRepository;
+//	@Autowired
+//	KeyRepository keyRepository;
 
 	private static final Logger logger = LoggerFactory.getLogger(DashboardController.class);
 

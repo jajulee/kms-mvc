@@ -139,7 +139,6 @@
 	</div>
 
 	<jsp:include page="_footer.jsp"/>
-</script>
     
 </body>
 </html>

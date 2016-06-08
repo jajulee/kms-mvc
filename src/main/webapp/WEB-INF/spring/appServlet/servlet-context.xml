@@ -29,6 +29,19 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 
+	<context:annotation-config />
 	<context:component-scan base-package="org.victar.kms" />
+	<mongo:repositories base-package="org.victar.kms.dal" />
+
+	<beans:bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean" >
+		<beans:property name="host" value="localhost" />
+	</beans:bean>
+
+	<beans:bean id="mongoTemplate"
+		class="org.springframework.data.mongodb.core.MongoTemplate">
+		<beans:constructor-arg ref="mongoDbFactory" />
+	</beans:bean>
+	
+	<mongo:db-factory id="mongoDbFactory" dbname="kms" host="localhost" port="27017" />
 
 </beans:beans>

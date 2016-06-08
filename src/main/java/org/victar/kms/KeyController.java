@@ -6,16 +6,21 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.victar.kms.dal.KeyRepository;
 
 @Controller
 public class KeyController {
 
 	private static final Logger logger = LoggerFactory.getLogger(KeyController.class);
-
+		
+//	@Autowired
+//	private KeyRepository keyRepository;
+	
 	@RequestMapping(value = "/keys", method = RequestMethod.GET)
 	public String keys(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
